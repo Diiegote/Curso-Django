@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>{% block title %} {% endblock %}</title>
+   <link type="text/css"  href='{% static "css/plantillaBarraDeNavegacion.css" %}' rel="stylesheet"/>
+</head>
+
+<body>
+   {% include "plantillaBarraDeNavegacion.html" %}
+   <h1 style="color:blue;">Diego Martinotti</h1>
+   {% block content %}
+
+   {% endblock %}
+   <p style="color: rgb(165, 42, 136);">Este es el pie de pagina</p>
+</body>
+
+</html>

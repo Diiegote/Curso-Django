@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Plantilla</title>
+   <style type="text/css">
+      h3 {
+         color:darkslategray;
+      }
+   </style>
+</head>
+
+<body>
+   <h1 style="color: rgb(177, 67, 67);">Nombre del Canal: {{NombreCanal}}</h1>
+   <h2 style="color: rgb(177, 67, 67);">Fecha Actual: {{FechaActual.day}} / {{FechaActual.month}} / {{FechaActual.year}}</h2>
+      {# Comentario de una sola linea #}
+   <h3>Numero de lenguajes: {{Lenguajes|length}}</h3>
+   <ul>
+      {% for i in Lenguajes %}
+      {% if i == "Python" %}
+      <li style="color: rgb(164, 164, 11);font-size: x-large;">{{i}}</li>
+      {% elif i == "JavaScript" %}
+      <li style="color:rgb(221, 221, 1);font-size: x-large;">{{i}}</li>
+      {% elif i == "Java" %}
+      <li style="color: rgb(8, 137, 184);font-size: x-large;">{{i}}</li>
+      {% elif i == "C#" %}
+      <li style="color: rgb(131, 8, 184);font-size: x-large;">{{i}}</li>
+      {% elif i == "C++" %}
+      <li style="color: rgb(8, 17, 184);font-size: x-large;">{{i}}</li>
+      {% elif i == "Ruby" %}
+      <li style="color: rgb(184, 8, 8);font-size: x-large;">{{i}}</li>
+      {% else %}
+      <li style="font-size: x-large;">{{i|first}} : {{i|lower}}</li>
+      {% endif %}
+      {% endfor %}
+   </ul>
+   {% comment %}
+   Este es un Comentario
+   de varias
+   lineas.
+   {% endcomment %}
+</body>
+
+</html>
