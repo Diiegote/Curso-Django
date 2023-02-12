@@ -120,3 +120,6 @@ def plantillaHija1(request):
 
 def plantillaHija2(request):
    return render(request, "plantillaHija_2.html")
+
+
+
